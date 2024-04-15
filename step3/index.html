@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button id="button_A">Press me</button>
+    <h3 id="heading_A"></h3>
+
+    <button id="button_B">Press me now!</button>
+    <h3 id="heading_B"></h3>
+
+    <script>
+      const buttonA = document.querySelector("#button_A");
+      const headingA = document.querySelector("heading_A");
+
+      buttonA.onclick = () => {
+        const name = prompt("what is your name?");
+        alert(`Hello ${name}, nice to meet you!`);
+        headingA.textContent = `Welcome ${name}`;
+      };
+
+      const buttonB = document.querySelector("#button_B");
+      const headingB = document.querySelector("heading_B");
+
+      buttonB.onclick = () => {
+        alert(`Hello ${prompt("What is your name?")}, nice meet you!`);
+        headingB.textContent = `Welcome ${prompt("What is your name?")}`;
+      };
+    </script>
+  </body>
+</html>

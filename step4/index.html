@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Array practice</title>
+  </head>
+  <body>
+    <input type="text" id="array_made" />
+    <input type="submit" id="array_submit" value="Submit" />
+    <p id="array"></p>
+    <p id="array_length"></p>
+    <script>
+      const makeArray = document.querySelector("#array_made");
+      const submitArray = document.querySelector("#array_submit");
+      const arrayResult = document.querySelector("#array");
+      const arrayLength = document.querySelector("#array_length");
+
+      let CallArray = [];
+
+      submitArray.addEventListener("click", () => {
+        CallArray.push(makeArray.value);
+        arrayResult.textContent = CallArray.join(", ");
+        arrayLength.textContent = CallArray.length;
+      });
+
+      arrayResult.textContent = JSON.stringify(CallArray);
+      arrayLength.textContent = JSON.stringify(CallArray.length);
+    </script>
+  </body>
+</html>
